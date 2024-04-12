@@ -45,7 +45,7 @@ public class InmuebleController {
     }
 
     @GetMapping("/buscarPorNumeroReferencia/{numeroReferencia}")
-    public InmuebleDTO findInmuebleByNumeroReferencia(@Validated @RequestBody Long numeroReferencia) {
+    public InmuebleDTO findInmuebleByNumeroReferencia(@PathVariable Long numeroReferencia) {
         return inmuebleService.findInmuebleByNumeroReferencia(numeroReferencia);
     }
 
