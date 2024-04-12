@@ -4,6 +4,7 @@ import agencia.inmobiliaria.Repository.Entities.Inmueble.TipoInmueble;
 import agencia.inmobiliaria.Repository.Entities.Oficina;
 import agencia.inmobiliaria.Repository.Entities.Zona;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -12,7 +13,7 @@ public class InmuebleDTO {
 
     private Long id;
 
-    @NotEmpty(message = "no puede estar vacio")
+    @NotNull(message = "no puede estar vacio")
     private Long numeroReferencia;
 
     @NotEmpty(message = "no puede estar vacio")
@@ -21,15 +22,13 @@ public class InmuebleDTO {
     @NotEmpty(message = "no puede estar vacio")
     private String telefonoPropietario;
 
-    @NotEmpty(message = "no puede estar vacio")
+    @NotNull(message = "no puede estar vacio")
     private Integer superficie;
 
     private TipoInmueble tipoInmueble;
 
-    @NotEmpty(message = "no puede estar vacio")
     private Integer tamanoParcela;
 
-    @NotEmpty(message = "no puede estar vacio")
     private String urbanizacion;
 
     private Oficina oficina;
