@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import agencia.inmobiliaria.Configurationn.InmuebleConversion;
@@ -11,7 +12,11 @@ import agencia.inmobiliaria.Repository.InmuebleRepository;
 import agencia.inmobiliaria.Repository.Entities.Inmueble;
 import agencia.inmobiliaria.Repository.EntitiesDTO.InmuebleDTO;
 import agencia.inmobiliaria.Service.InmuebleService;
+import lombok.AllArgsConstructor;
 
+
+@Service
+@AllArgsConstructor
 public class InmuebleImplService implements InmuebleService{
     
 

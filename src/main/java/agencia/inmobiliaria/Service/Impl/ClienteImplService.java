@@ -4,13 +4,17 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import agencia.inmobiliaria.Configurationn.ClienteConversion;
 import agencia.inmobiliaria.Repository.ClienteRepository;
 import agencia.inmobiliaria.Repository.Entities.Cliente;
 import agencia.inmobiliaria.Repository.EntitiesDTO.ClienteDTO;
 import agencia.inmobiliaria.Service.ClienteService;
+import lombok.AllArgsConstructor;
 
+@Service
+@AllArgsConstructor
 public class ClienteImplService implements ClienteService{
     
     

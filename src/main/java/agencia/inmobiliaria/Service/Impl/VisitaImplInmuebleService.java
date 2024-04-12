@@ -4,13 +4,18 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import agencia.inmobiliaria.Configurationn.VisitaInmuebleConversion;
 import agencia.inmobiliaria.Repository.VisitaInmuebleRepository;
 import agencia.inmobiliaria.Repository.Entities.VisitaInmueble;
 import agencia.inmobiliaria.Repository.EntitiesDTO.VisitaInmuebleDTO;
 import agencia.inmobiliaria.Service.VisitaInmuebleService;
+import lombok.AllArgsConstructor;
 
+
+@Service
+@AllArgsConstructor
 public class VisitaImplInmuebleService implements VisitaInmuebleService{
     
     @Autowired
