@@ -14,4 +14,8 @@ public interface InmuebleService {
     void deleteById(Long id);
 
     List<InmuebleDTO> findAll();
+
+    List<InmuebleDTO> getInmuebleByAlquilerOrVenta();
+
+    public InmuebleDTO findInmuebleByNumeroReferencia(Long numeroReferencia);
 }

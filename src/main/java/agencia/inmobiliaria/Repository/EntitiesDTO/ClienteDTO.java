@@ -1,6 +1,7 @@
 package agencia.inmobiliaria.Repository.EntitiesDTO;
 
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -14,10 +15,10 @@ public class ClienteDTO {
     @NotEmpty(message = "no puede estar vacio")
     private String apellido;
 
-    @NotEmpty(message = "no puede estar vacio")
+    @NotNull(message = "no puede estar vacio")
     private Long telefono;
 
-    @NotEmpty(message = "no puede estar vacio")
+    @NotNull(message = "no puede estar vacio")
     private Long cedula;
 
     @NotEmpty(message = "no puede estar vacio")

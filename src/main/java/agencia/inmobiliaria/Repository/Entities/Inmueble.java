@@ -51,6 +51,18 @@ public class Inmueble {
     @Column(name = "urbanizacion" , nullable = true)
     private String urbanizacion;
 
+    @Column(name = "venta" , nullable = false)
+    private Boolean venta;
+
+    @Column(name = "alquiler" , nullable = false)
+    private Boolean alquiler;
+
+    @Column(name = "valorVenta" , nullable = false)
+    private Long valorVenta;
+
+    @Column(name = "valorAlquiler" , nullable = false)
+    private Long valorAlquiler;
+
     @ManyToOne
     @JoinColumn(nullable = true)
     private Oficina oficina;

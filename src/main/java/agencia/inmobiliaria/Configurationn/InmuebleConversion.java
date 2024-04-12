@@ -16,7 +16,7 @@ public class InmuebleConversion {
         return dbm.map(inmuebleDTO,Inmueble.class);
     }
 
-    public InmuebleDTO convertirClienteADto(Inmueble inmueble){
+    public InmuebleDTO convertirInmuebleADto(Inmueble inmueble){
         InmuebleDTO inmuebleDTO = dbm.map(inmueble, InmuebleDTO.class);
 
         inmuebleDTO.setId(inmueble.getId());
@@ -29,7 +29,10 @@ public class InmuebleConversion {
         inmuebleDTO.setUrbanizacion(inmueble.getUrbanizacion());
         inmuebleDTO.setOficina(inmueble.getOficina());
         inmuebleDTO.setZona(inmueble.getZona());
-
+        inmuebleDTO.setVenta(inmueble.getVenta());
+        inmuebleDTO.setAlquiler(inmueble.getAlquiler());
+        inmuebleDTO.setValorVenta(inmueble.getValorVenta());
+        inmuebleDTO.setValorAlquiler(inmueble.getValorAlquiler());
 
         return inmuebleDTO;
     } 

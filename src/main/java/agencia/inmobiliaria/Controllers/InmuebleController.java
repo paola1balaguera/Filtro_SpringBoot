@@ -39,6 +39,16 @@ public class InmuebleController {
         return inmuebleService.findAll();
     }
 
+    @GetMapping("/inmueblePorAlquilerOVenta")
+    public List<InmuebleDTO> getInmuebleByAlquilerOrVenta() {
+        return inmuebleService.getInmuebleByAlquilerOrVenta();
+    }
+
+    @GetMapping("/buscarPorNumeroReferencia/{numeroReferencia}")
+    public InmuebleDTO findInmuebleByNumeroReferencia(@Validated @RequestBody Long numeroReferencia) {
+        return inmuebleService.findInmuebleByNumeroReferencia(numeroReferencia);
+    }
+
 
     @PostMapping("/")
     public ResponseEntity<Map<String, Object>> save(@Validated @RequestBody InmuebleDTO inmuebleDTO, BindingResult result) {

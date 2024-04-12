@@ -31,6 +31,18 @@ public class InmuebleDTO {
 
     private String urbanizacion;
 
+    @NotNull(message = "no puede estar vacio")
+    private Boolean venta;
+
+    @NotNull(message = "no puede estar vacio")
+    private Boolean alquiler;
+
+    @NotNull(message = "no puede estar vacio")
+    private Long valorVenta;
+
+    @NotNull(message = "no puede estar vacio")
+    private Long valorAlquiler;
+
     private Oficina oficina;
 
     private Zona zona;

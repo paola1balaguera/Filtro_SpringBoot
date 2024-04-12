@@ -29,7 +29,7 @@ public class InmuebleImplService implements InmuebleService{
     public InmuebleDTO save(InmuebleDTO inmuebleDTO ) {
         Inmueble inmueble = inmuebleConversion.convertirDTOAInmueble(inmuebleDTO);
         inmuebleRepository.save(inmueble);
-        return inmuebleConversion.convertirClienteADto(inmueble);
+        return inmuebleConversion.convertirInmuebleADto(inmueble);
     }
 
     public InmuebleDTO update(Long id, InmuebleDTO inmuebleDTO){
@@ -51,7 +51,7 @@ public class InmuebleImplService implements InmuebleService{
 
             inmuebleRepository.save(inmuebleCurrent);
             
-            return inmuebleConversion.convertirClienteADto(inmuebleCurrent);
+            return inmuebleConversion.convertirInmuebleADto(inmuebleCurrent);
         }
         return null;
     }
@@ -66,7 +66,25 @@ public class InmuebleImplService implements InmuebleService{
     public List<InmuebleDTO> findAll(){
         List<Inmueble> inmuebles = (List<Inmueble>) inmuebleRepository.findAll();
         return inmuebles.stream()
-                    .map(inmueblesitos -> inmuebleConversion.convertirClienteADto(inmueblesitos ))
+                    .map(inmueblesitos -> inmuebleConversion.convertirInmuebleADto(inmueblesitos ))
                     .toList();
         }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<InmuebleDTO> getInmuebleByAlquilerOrVenta() {
+        List<Inmueble> inmuebles = (List<Inmueble>) inmuebleRepository.getInmuebleByAlquilerOrVenta();
+        return inmuebles.stream()
+                    .map(inmueblesitos -> inmuebleConversion.convertirInmuebleADto(inmueblesitos ))
+                    .toList();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public InmuebleDTO findInmuebleByNumeroReferencia(Long numeroReferencia) {
+        Inmueble inmuebleCurrent = inmuebleRepository.findInmuebleByNumeroReferencia(numeroReferencia);
+
+        return inmuebleConversion.convertirInmuebleADto(inmuebleCurrent);
+    }
+    
 }
