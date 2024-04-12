@@ -16,19 +16,29 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "cliente")
 public class Cliente {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nombres" , nullable = false)
-    private String nombres;
 
-    @Column(name = "apellidos" , nullable = false)
-    private String apellidos;
+    @Column(name = "nombre" , nullable = false)
+    private String nombre;
 
-    @Column(name = "cedula" , nullable = false)
+    @Column(name = "apellido" , nullable = false)
+    private String apellido;
+
+
+    @Column(name = "telefono" , nullable = false, unique = true)
+    private Long telefono;
+
+
+    @Column(name = "cedula" , nullable = false, unique = true)
     private Long cedula;
 
-    @Column(name = "email" , nullable = false)
+
+    @Column(name = "email" , nullable = false, unique = true)
     private String email;
+
+
 }

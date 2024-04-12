@@ -1,5 +1,6 @@
 package agencia.inmobiliaria.Repository.Entities;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,10 +17,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Table(name = "oficina")
 public class Oficina {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "nombre" , nullable = false)
-    private String nombre;
+
+    @Column(name = "direccion" , nullable = false, unique = true)
+    private String direccion;
 }
