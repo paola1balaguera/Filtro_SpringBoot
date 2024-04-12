@@ -45,10 +45,10 @@ public class Inmueble {
     @Column(name = "tipoInmueble" , nullable = false)
     private TipoInmueble tipoInmueble;
 
-    @Column(name = "tamanoParcela" , nullable = false)
+    @Column(name = "tamanoParcela" , nullable = true)
     private Integer tamanoParcela;
 
-    @Column(name = "urbanizacion" , nullable = false)
+    @Column(name = "urbanizacion" , nullable = true)
     private String urbanizacion;
 
     @ManyToOne
