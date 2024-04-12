@@ -2,10 +2,12 @@ package agencia.inmobiliaria.Configurationn;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import agencia.inmobiliaria.Repository.Entities.Inmueble;
 import agencia.inmobiliaria.Repository.EntitiesDTO.InmuebleDTO;
 
+@Component
 public class InmuebleConversion {
     @Autowired
     private ModelMapper dbm;

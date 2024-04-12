@@ -2,10 +2,12 @@ package agencia.inmobiliaria.Configurationn;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import agencia.inmobiliaria.Repository.Entities.Cliente;
 import agencia.inmobiliaria.Repository.EntitiesDTO.ClienteDTO;
 
+@Component
 public class ClienteConversion {
     
     @Autowired
